@@ -1,3 +1,5 @@
 test.sh
 packages.sh
 install.sh
+test/
+.gitignore
