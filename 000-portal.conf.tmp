@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+  ServerName 192.168.1.1
+  DocumentRoot /var/www/html/captive/__SSID__
+
+  <Directory "/var/www/html/captive/__SSID__">
+    Options +FollowSymLinks
+    Require all granted
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    RewriteRule ^ /index.html [L]
+  </Directory>
+
+  <FilesMatch \.php$>
+    SetHandler application/x-httpd-php
+  </FilesMatch>
+</VirtualHost>
