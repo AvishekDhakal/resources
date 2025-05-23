@@ -37,7 +37,7 @@ nav img {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.3s;
   white-space: nowrap;             /* prevents wrapping */
   flex: 0 0 auto;
 }
@@ -78,6 +78,73 @@ nav img {
   text-decoration: none;
 }
 
+/* ─── PHONE LOGIN MODAL POLISH ────────────────────────────── */
+#loginModal .modal-content {
+  background-color: #ffffff;               /* white card */
+  border-radius: 8px;                      /* rounded corners */
+  padding: 2rem;                           /* roomy padding */
+  width: 90%;
+  max-width: 400px;                        /* cap width on desktop */
+  margin: 5% auto;                         /* vertical centering */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+#loginModal .login-box h1 {
+  font-size: 1.5rem;
+  color: #2270d3;                          /* blue accent */
+  margin-bottom: 1rem;
+}
+
+/* ─── Side-by-Side Input + Button ───────────────────────── */
+#loginModal .login-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;             /* space between input & button */
+  flex-wrap: wrap;         /* allow the terms text to wrap to new line */
+}
+/* ─── Bigger, Blue-Bordered Input ───────────────────────── */
+#loginModal .login-form select,
+#loginModal .login-form .form-control {
+  flex: 1;                      /* keep input filling space */
+  margin: 0;                    /* reset old margins */
+  padding: 0.75rem 1.5rem;      /* same vertical/horizontal padding as button */
+  font-size: 1rem;              /* match button font-size */
+  border: 2px solid #2270d3;    /* blue border */
+  border-radius: 4px;           /* same radius as button */
+  transition: border-color .2s, box-shadow .2s;
+}
+
+#loginModal .login-form select:focus,
+#loginModal .login-form .form-control:focus {
+  border-color: #1b5fa0;        /* darker blue on focus */
+  box-shadow: 0 0 0 3px rgba(34,112,211,0.2);
+  outline: none;
+}
+
+#loginModal .login-form button {
+  margin: 0;
+  background-color: #2270d3;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+#loginModal .login-form button:hover {
+  background-color: #1b5fa0;
+}
+
+/* ─── Terms Text: force onto its own line ──────────────────── */
+#loginModal .login-form p {
+  flex: 1 1 100%;         /* full width */
+  margin: 1rem 0 0;       /* space above */
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+}
+
 /* ─── Options Pane ─────────────────────────────────────────────────────── */
 .options {
   display: flex;
@@ -113,7 +180,8 @@ nav img {
   background-color: #0056b3;
 }
 
-/* ─── Phone Form ──────────────────────────────────────────────────────── */
+/* ─── Other Forms & Boxes ────────────────────────────────────────────── */
+/* Inline adjustments for phone form elements */
 .login-form .form-select,
 .login-form .form-control,
 .login-form button {
@@ -121,7 +189,7 @@ nav img {
   margin-bottom: 10px;
 }
 
-/* ─── Password Form ───────────────────────────────────────────────────── */
+/* Password Form */
 .container {
   display: flex;
   justify-content: center;
@@ -168,7 +236,6 @@ nav img {
 .login-box button:hover {
   background-color: #0948b3;
 }
-
 .message-box {
   display: none;
   padding: 15px;
@@ -190,45 +257,53 @@ nav img {
 
 @media (max-width: 768px) {
   nav {
-      width: 100%;               /* full width on tablet */
+    width: 100%;
   }
   .modal-content {
-      width: 90% !important;     /* ensure modals shrink */
+    width: 90% !important;
   }
   .login-box {
-      padding: 20px;
+    padding: 20px;
   }
   #getOnlineButton {
-      font-size: 24px;
-      padding: 5px 8px;
+    font-size: 24px;
+    padding: 5px 8px;
   }
 }
 
 @media (max-width: 480px) {
   nav {
-      width: 100%;
+    width: 100%;
   }
   .modal-content {
-      width: 95% !important;     /* further shrink on phone */
+    width: 95% !important;
   }
   .login-box {
-      padding: 15px;
+    padding: 15px;
   }
   .login-box h1 {
-      font-size: 18px;
+    font-size: 18px;
   }
   .login-box h2 {
-      font-size: 14px;
+    font-size: 14px;
   }
   .login-box input {
-      font-size: 12px;
-      padding: 8px;
+    font-size: 12px;
+    padding: 8px;
   }
   .login-box button {
-      font-size: 14px;
-      padding: 8px;
+    font-size: 14px;
+    padding: 8px;
   }
   .options {
-      flex-direction: column;    /* stack options on narrow screens */
+    flex-direction: column;    /* stack options on narrow screens */
+  }
+  /* Stack phone form vertically */
+  #loginModal .login-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #loginModal .login-form button {
+    align-self: flex-end;      /* button on right */
   }
 }

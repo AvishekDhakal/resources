@@ -1,8 +1,8 @@
 <VirtualHost *:80>
   ServerName 192.168.1.1
-  DocumentRoot /var/www/html/captive/__SSID__
+  DocumentRoot /var/www/html/captive/__ISPNAME__
 
-  <Directory "/var/www/html/captive/__SSID__">
+  <Directory "/var/www/html/captive/__ISPNAME__">
     Options +FollowSymLinks
     Require all granted
     RewriteEngine On
