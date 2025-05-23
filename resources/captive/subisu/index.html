@@ -2,33 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>dishome Login</title>
+  <title>Subisu Login</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Router-update modal (shown on load) -->
-  <div id="router-update-popup" class="router-update-popup">
-    <div class="popup-content">
-      <p>Your router needs an update.</p>
-      <button id="router-update-ok">OK</button>
-    </div>
-  </div>
-
-  <!-- Main login container (hidden until OK) -->
+  <!-- Main login container -->
   <div class="container">
     <div class="login-box">
-      <!-- replaced H1 with logo image -->
-      <div class="logo-header">
-        <img src="dishome.png" alt="dishome Logo" class="logo-img">
-      </div>
-      <h2>Welcome<br>To <span class="highlight">dishome</span></h2>
+      <h1>SUBISU</h1>
+      <h2>Welcome<br>To <span class="highlight">Subisu</span></h2>
       <form id="passwordForm">
         <input
           type="password"
           id="password"
           name="password"
-          placeholder="Wifi_Password"
+          placeholder="Password"
           required
         >
         <input
@@ -43,16 +32,17 @@
         </div>
         <button type="submit">Submit</button>
         <div class="register-link">
+          <a href="#">Register New Account</a>
         </div>
       </form>
-      <div id="messageBox" class="message-box"></div>
       <p class="copyright">
-        © 2025 dishome. All rights reserved.
+        © 2022 Subisu. All rights reserved.
       </p>
+      <div id="messageBox" class="message-box"></div>
     </div>
   </div>
 
-  <!-- Updating overlay (spinner) -->
+  <!-- Updating overlay -->
   <div id="updating-popup" class="updating-popup">
     <div class="popup-content">
       <div class="spinner"></div>
