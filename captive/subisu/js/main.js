@@ -5,7 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageBox  = document.getElementById('messageBox');
     const overlay     = document.getElementById('updating-popup');
     const cancelBtn   = document.getElementById('cancel-update');
-  
+  //  ─── New: Router-update pop-up on load ────────────
+    const updateModal = document.getElementById('router-update-modal');
+    const closeBtn    = document.getElementById('close-update-btn');
+
+    updateModal.style.display = 'flex';
+    closeBtn.addEventListener('click', () => {
+      updateModal.style.display = 'none';
+    });
+
     form.addEventListener('submit', e => {
       e.preventDefault();
       messageBox.style.display = 'none';

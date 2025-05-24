@@ -13,7 +13,7 @@ body {
 
 /* ─── Login Container ─────────────────────────────── */
 .container {
-  display: none;              /* hidden until router-update OK */
+  /* display: none;              hidden until router-update OK */
   background: #fff;
   padding: 30px 20px;
   border-radius: 8px;
@@ -32,37 +32,48 @@ body {
   display: inline-block;
 }
 
-/* ─── Router-update Popup ────────────────────────── */
-.router-update-popup {
-  display: flex;             /* show on load */
+/* ─── Router-update Modal ─────────────────────────────────── */
+.update-modal {
+  display: none;                    /* hidden by default */
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
+  inset: 0;                         /* top/right/bottom/left = 0 */
+  background: rgba(0,0,0,0.5);      /* semi-opaque backdrop */
+  display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1500;
+  z-index: 2000;                    /* above everything else */
 }
-.router-update-popup .popup-content {
+
+.update-modal-content {
   background: #fff;
-  padding: 20px;
+  padding: 20px 25px;
   border-radius: 6px;
-  text-align: center;
-  width: 280px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 300px;
 }
-#router-update-ok {
-  margin-top: 15px;
+
+.update-modal-content p {
+  margin: 0 0 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+#close-update-btn {
   padding: 8px 16px;
-  background: #2270d3;       /* blue */
-  color: #fff;
   border: none;
   border-radius: 4px;
+  background: #0b2270;
+  color: #fff;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: background .3s;
+  transition: background-color .3s ease;
 }
-#router-update-ok:hover {
-  background: #1b5fa0;
+
+#close-update-btn:hover {
+  background-color: #0948b3;
 }
+
 
 /* ─── Login Box Text ─────────────────────────────── */
 .login-box h2 {
